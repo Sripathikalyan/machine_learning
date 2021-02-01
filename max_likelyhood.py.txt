@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+import math
+beta = 1
+Mu = (1,2,3)
+Var = (1.2,1.9,3.2)
+X= np.polyfit(Mu,Var,1)
+print(X)
+plt.xlabel('Mu')
+plt.ylabel('Var')
+plt.title('Maximum likelihood function')
+plt.plot(Mu,Var)
+x = np.polyval(X,Mu)
+plt.plot(Mu,Var,'*')
+plt.plot(Mu,x)
+plt.show()
